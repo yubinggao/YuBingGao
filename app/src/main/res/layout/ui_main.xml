@@ -10,7 +10,7 @@
         android:id="@+id/fragment_cycle_viewpager_content"
         android:name="com.yubinggao.lib.view.viewpager.CycleViewPager"
         android:layout_width="match_parent"
-        android:layout_height="360dip" />
+        android:layout_height="150dip" />
 
 
     <RelativeLayout

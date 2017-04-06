@@ -1,6 +1,7 @@
 package com.yubinggao;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -17,9 +18,9 @@ public class ViewFactory {
 	 * @return
 	 */
 	public static ImageView getImageView(Context context, String url) {
-//		ImageView imageView = (ImageView)LayoutInflater.from(context).inflate(
-//				R.layout.view_banner, null);
-		ImageView imageView =  new ImageView(context);
+		ImageView imageView = (ImageView) LayoutInflater.from(context).inflate(
+				R.layout.view_banner, null);
+//		ImageView imageView =  new ImageView(context);
 		ImageLoader.getInstance().displayImage(url, imageView);
 		return imageView;
 	}

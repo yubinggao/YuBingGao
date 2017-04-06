@@ -1,15 +1,12 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.compileSdk
     buildToolsVersion rootProject.ext.buildTools
 
     defaultConfig {
-        applicationId "com.yubinggao"
         minSdkVersion rootProject.ext.minSdk
         targetSdkVersion rootProject.ext.targetSdk
-        versionCode 1
-        versionName "1.0"
     }
     buildTypes {
         release {
@@ -20,7 +17,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
-    compile project(':yubinggaolibrary')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:${rootProject.ext.support}"
+    compile "com.android.support:cardview-v7:${rootProject.ext.support}"
+    compile "com.android.support:recyclerview-v7:${rootProject.ext.support}"
+    compile "com.android.support:design:${rootProject.ext.support}"
 }

@@ -17,3 +17,11 @@ allprojects {
         jcenter()
     }
 }
+
+ext {
+    compileSdk = 25
+    minSdk = 15
+    targetSdk = 25
+    support = "25.0.1"
+    buildTools = "25.0.1"
+}

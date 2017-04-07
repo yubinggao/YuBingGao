@@ -1,10 +1,11 @@
-package com.yubinggao;
+package com.yubinggao.viewpager;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.yubinggao.R;
 
 /**
  * ImageView创建工厂
@@ -19,7 +20,7 @@ public class ViewFactory {
 	 */
 	public static ImageView getImageView(Context context, String url) {
 		ImageView imageView = (ImageView) LayoutInflater.from(context).inflate(
-				R.layout.view_banner, null);
+				R.layout.img_view, null);
 //		ImageView imageView =  new ImageView(context);
 		ImageLoader.getInstance().displayImage(url, imageView);
 		return imageView;

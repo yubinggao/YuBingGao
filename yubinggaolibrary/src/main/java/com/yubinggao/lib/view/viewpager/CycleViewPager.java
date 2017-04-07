@@ -41,15 +41,13 @@ public class CycleViewPager extends Fragment implements OnPageChangeListener {
     private boolean isScrolling = false; // 滚动框是否滚动着
     private boolean isCycle = false;     // 是否循环
     private boolean isWheel = false;     // 是否轮播
-    private long releaseTime = 0;        // 手指松开、页面不滚动时间，防止手机松开后短时间进行切换
     private int WHEEL = 100;             // 转动
-    private int WHEEL_WAIT = 101;        // 等待
     private ImageCycleViewListener mImageCycleViewListener;
     private List<ViewPagerInfo> infos;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.view_cycle_viewpager_contet, null);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.viewpager_contet, null);
         viewPager = (BaseViewPager) view.findViewById(R.id.viewPager);
         indicatorLayout = (LinearLayout) view.findViewById(R.id.layout_viewpager_indicator);
         viewPagerFragmentLayout = (FrameLayout) view.findViewById(R.id.layout_viewager_content);
@@ -104,7 +102,7 @@ public class CycleViewPager extends Fragment implements OnPageChangeListener {
         indicatorLayout.removeAllViews();
         for (int i = 0; i < indicators.length; i++) {
             View view = LayoutInflater.from(getActivity()).inflate(
-                    R.layout.view_cycle_viewpager_indicator, null);
+                    R.layout.viewpager_indicator, null);
             indicators[i] = (ImageView) view.findViewById(R.id.image_indicator);
             indicatorLayout.addView(view);
         }

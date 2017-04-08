@@ -11,6 +11,16 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        debug {
+            keyAlias '891world'
+            keyPassword '3180227101'
+            storeFile file('../3180227101.keystore')
+            storePassword '3180227101'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false

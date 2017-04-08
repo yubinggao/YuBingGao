@@ -4,18 +4,41 @@
     android:layout_height="match_parent">
 
     <com.yubinggao.lib.view.StreamViewGroup
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <com.yubinggao.lib.view.CountdownView
+            android:id="@+id/view_pager_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onClick" />
 
         <com.yubinggao.lib.view.CountdownView
             android:id="@+id/code_cv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClick"
-            android:gravity="center">
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:onClick="onClick" />
 
-        </com.yubinggao.lib.view.CountdownView>
+        <com.yubinggao.lib.view.CountdownView
+            android:id="@+id/pickerview_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:onClick="onClick" />
+
+        <com.yubinggao.lib.view.CountdownView
+            android:id="@+id/amap_map_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:onClick="onClick" />
+
     </com.yubinggao.lib.view.StreamViewGroup>
 </ScrollView>
 

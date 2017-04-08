@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yubinggao">
+    <!--访问CellID或WiFi,-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用地理位置信息的服务-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--允许程序访问额外的定位-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--sd卡读写-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态的权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问有关GSM网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--改变WLAN状态的开关-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--可以获取使用Wi-Fi等WLAN无线网络-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许当前应用改变配置-->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!--系统就不能进入深度休眠,但可以进行设备的浅度休眠操作-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--允许修改系统设置-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
@@ -13,6 +35,7 @@
             android:screenOrientation="portrait">
 
         </activity>
+
         <activity
             android:name="com.yubinggao.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -23,6 +46,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.yubinggao.lib.map.amap.MapSelectAddressActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!-- 高德地图定位 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ea3e032f8b3c284f5ab5c8892ac26583" />
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- 高德地图定位服务 -->
+
+
     </application>
 
 </manifest>

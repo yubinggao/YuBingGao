@@ -23,6 +23,7 @@ public class CityInfo implements IPickerViewData {
     public CityInfo() {
 
     }
+
     public CityInfo(String content) {
         this.name = content;
         this.code = "10214";
@@ -31,6 +32,12 @@ public class CityInfo implements IPickerViewData {
     public CityInfo(String content, String code) {
         this.name = content;
         this.code = code;
+    }
+
+    public CityInfo(String provinceName, String cityName, String districtName) {
+        this.provinceName = provinceName;
+        this.cityName = cityName;
+        this.districtName = districtName;
     }
 
     public CityInfo(RegeocodeAddress addres) {
@@ -43,6 +50,7 @@ public class CityInfo implements IPickerViewData {
         this.township = addres.getTownship();
         this.type = 1;
     }
+
 
     public CityInfo(PoiItem poiItems) {
         this.code = poiItems.getAdCode();

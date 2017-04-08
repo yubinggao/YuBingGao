@@ -39,6 +39,14 @@
             android:gravity="center"
             android:onClick="onClick" />
 
+        <com.yubinggao.lib.view.CountdownView
+            android:id="@+id/recyclerview_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:onClick="onClick" />
+
     </com.yubinggao.lib.view.StreamViewGroup>
 </ScrollView>
 

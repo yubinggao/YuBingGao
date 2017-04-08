@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * Created by Administrator on 2017/4/7.
  */
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends Activity implements View.OnClickListener {
     private ArrayList<CityInfo> options1Items = null;                        //城市选择
     private ArrayList<ArrayList<CityInfo>> options2Items = null;             //城市选择
     private ArrayList<ArrayList<ArrayList<CityInfo>>> options3Items = null;  //城市选择
@@ -37,23 +37,27 @@ public class MainActivity extends Activity implements View.OnClickListener{
         name.setText("3D滚轮");
         name = byId(R.id.amap_map_cv);
         name.setText("高德地图");
+        name = byId(R.id.recyclerview_cv);
+        name.setText("加载更多");
     }
 
     public void onClick(View v) {
+        Class clazz = null;
         switch (v.getId()) {
             case R.id.view_pager_cv:
-                startActivity(new Intent(this, ViewPagerActivity.class));
+                clazz = ViewPagerActivity.class;
                 break;
             case R.id.code_cv:
                 cv.startCountdown(3);
-                break;
+                return;
             case R.id.pickerview_cv:
                 showCitySelect();
-                break;
+                return;
             case R.id.amap_map_cv:
-                startActivity(new Intent(this, MapSelectAddressActivity.class));
+                clazz = MapSelectAddressActivity.class;
                 break;
         }
+        if (clazz != null) startActivity(new Intent(this, clazz));
     }
 
     private void showCitySelect() {
@@ -89,6 +93,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
         pvOptions.show();
     }
+
     public CountdownView byId(int id) {
         View view = findViewById(id);
         view.setOnClickListener(this);

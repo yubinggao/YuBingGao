@@ -3,6 +3,7 @@ package com.yubinggao;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.View;
 
 import com.yubinggao.lib.bean.CityInfo;
@@ -23,7 +24,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private ArrayList<ArrayList<CityInfo>> options2Items = null;             //城市选择
     private ArrayList<ArrayList<ArrayList<CityInfo>>> options3Items = null;  //城市选择
     private OptionsPickerView pvOptions;
-    CountdownView cv;
+    private CountdownView cv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         name.setText("高德地图");
         name = byId(R.id.recyclerview_cv);
         name.setText("加载更多");
+        name = byId(R.id.phone_cv);
+        name.setText("获取手机信息");
+
     }
 
     public void onClick(View v) {
@@ -55,6 +59,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 return;
             case R.id.amap_map_cv:
                 clazz = MapSelectAddressActivity.class;
+                break;
+            case R.id.recyclerview_cv:
+                clazz = RecyclerViewActivity.class;
+                break;
+            case R.id.phone_cv:
+                clazz = PhoneInfoActivity.class;
                 break;
         }
         if (clazz != null) startActivity(new Intent(this, clazz));
@@ -99,4 +109,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
         view.setOnClickListener(this);
         return (CountdownView) view;
     }
+
 }

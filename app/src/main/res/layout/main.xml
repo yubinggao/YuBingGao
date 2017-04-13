@@ -6,46 +6,30 @@
     <com.yubinggao.lib.view.StreamViewGroup
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp">
+        android:layout_marginRight="10dp">
 
         <com.yubinggao.lib.view.CountdownView
             android:id="@+id/view_pager_cv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:onClick="onClick" />
+            style="@style/MainTextView"  />
 
         <com.yubinggao.lib.view.CountdownView
             android:id="@+id/code_cv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:onClick="onClick" />
+            style="@style/MainTextView"  />
 
         <com.yubinggao.lib.view.CountdownView
             android:id="@+id/pickerview_cv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:onClick="onClick" />
+            style="@style/MainTextView" />
 
         <com.yubinggao.lib.view.CountdownView
             android:id="@+id/amap_map_cv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:onClick="onClick" />
+            style="@style/MainTextView"  />
 
         <com.yubinggao.lib.view.CountdownView
             android:id="@+id/recyclerview_cv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:onClick="onClick" />
+            style="@style/MainTextView" />
+        <com.yubinggao.lib.view.CountdownView
+            android:id="@+id/phone_cv"
+            style="@style/MainTextView" />
 
     </com.yubinggao.lib.view.StreamViewGroup>
 </ScrollView>

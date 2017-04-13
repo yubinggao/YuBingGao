@@ -6,4 +6,14 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="MainTextView"  >
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+
 </resources>

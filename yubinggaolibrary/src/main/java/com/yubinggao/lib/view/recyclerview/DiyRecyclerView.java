@@ -18,7 +18,7 @@ import com.yubinggao.lib.R;
 
 
 /**
- * 支持上拉加载更多的
+ * 加载更多的
  */
 public class DiyRecyclerView extends RecyclerView {
     /**
@@ -31,7 +31,7 @@ public class DiyRecyclerView extends RecyclerView {
     public final static int TYPE_STAGGER = 4;//代码item展示模式是网格模式
 
     private boolean mIsFooterEnable = false;//是否允许加载更多
-    private static NoMoreView bottom;
+    private static NoMoreView noMoreView;
     /**
      * 自定义实现了头部和底部加载更多的adapter
      */
@@ -96,8 +96,8 @@ public class DiyRecyclerView extends RecyclerView {
                 }
             }
         });
-        if (bottom == null) {
-            bottom = new NoMoreView(context, this);
+        if (noMoreView == null) {
+            noMoreView = new NoMoreView(context, this);
         }
     }
 
@@ -119,14 +119,15 @@ public class DiyRecyclerView extends RecyclerView {
         this.mIsLoadingMore = loadingMore;
     }
 
-    public void isBottom(boolean isShow) {
+    public void isNoMoreView(boolean isShow) {
         if (isShow) {
-            removeItemDecoration(bottom);
+            removeItemDecoration(noMoreView);
         } else {
-            removeItemDecoration(bottom);
-            addItemDecoration(bottom);
+            removeItemDecoration(noMoreView);
+            addItemDecoration(noMoreView);
         }
     }
+
 
     /**
      * 加载更多监听
@@ -186,6 +187,7 @@ public class DiyRecyclerView extends RecyclerView {
                         mHeaderResId, parent, false));
             }
             if (viewType == TYPE_FOOTER) {
+
                 return new FooterViewHolder(
                         LayoutInflater.from(parent.getContext()).inflate(
                                 R.layout.recycler_foot_loading, parent, false));
@@ -373,6 +375,6 @@ public class DiyRecyclerView extends RecyclerView {
         setAutoLoadMoreEnable(hasMore);
         getAdapter().notifyDataSetChanged();
         mIsLoadingMore = false;
-        isBottom(hasMore);
+        isNoMoreView(hasMore);
     }
 }

@@ -39,10 +39,15 @@
     </item>
     <item>
         <shape android:shape="rectangle">
+            <!--圆角-->
             <corners android:radius="5.0dip" />
+            <!--颜色-->
             <solid android:color="#FFca3135" />
+            <!--边框-->
             <stroke android:width="1.0dip" android:color="#FFcccccc" />
+            <!--内边距-->
             <padding android:left="5dp" android:right="6dp" />
+            <!--大小-->
             <size android:width="60dp" android:height="28dp" />
         </shape>
     </item>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yubinggao.R;
 
@@ -22,7 +23,10 @@ public class ViewFactory {
 		ImageView imageView = (ImageView) LayoutInflater.from(context).inflate(
 				R.layout.img_view, null);
 //		ImageView imageView =  new ImageView(context);
-		ImageLoader.getInstance().displayImage(url, imageView);
+
+
+//		ImageLoader.getInstance().displayImage(url, imageView);
+		Glide.with(context).load(url).into(imageView);
 		return imageView;
 	}
 }

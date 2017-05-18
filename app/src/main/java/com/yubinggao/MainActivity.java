@@ -3,9 +3,10 @@ package com.yubinggao;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.view.View;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.MemoryCategory;
 import com.yubinggao.lib.bean.CityInfo;
 import com.yubinggao.lib.map.amap.MapSelectAddressActivity;
 import com.yubinggao.lib.utils.CityUtils;
@@ -42,6 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         name.setText("加载更多");
         name = byId(R.id.phone_cv);
         name.setText("获取手机信息");
+        Glide.get(this).setMemoryCategory(MemoryCategory.HIGH);
 
     }
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--获取验证码倒计时背景图-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="5.0dip" />
+            <solid android:color="#FFca3135" />
+            <stroke android:width="1.0dip" android:color="#FFca3135" />
+            <padding android:left="5dp" android:right="6dp" />
+            <size android:width="60dp" android:height="28dp" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="5.0dip" />
+            <solid android:color="#FFca3135" />
+            <stroke android:width="1.0dip" android:color="#FFca3135" />
+            <padding android:left="5dp" android:right="6dp" />
+            <size android:width="60dp" android:height="28dp" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="5.0dip" />
+            <solid android:color="#FFca3135" />
+            <stroke android:width="1.0dip" android:color="#FFca3135" />
+            <padding android:left="5dp" android:right="6dp" />
+            <size android:width="60dp" android:height="28dp" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="5.0dip" />
+            <solid android:color="#ffcccccc" />
+            <stroke android:width="1.0dip" android:color="#ffcccccc" />
+            <padding android:left="5dp" android:right="6dp" />
+            <size android:width="60dp" android:height="28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <!--圆角-->
+            <corners android:radius="5.0dip" />
+            <!--颜色-->
+            <solid android:color="#FFca3135" />
+            <!--边框-->
+            <stroke android:width="1.0dip" android:color="#FFcccccc" />
+            <!--内边距-->
+            <padding android:left="5dp" android:right="6dp" />
+            <!--大小-->
+            <size android:width="60dp" android:height="28dp" />
+        </shape>
+    </item>
+</selector>

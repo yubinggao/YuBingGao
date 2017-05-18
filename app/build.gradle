@@ -27,10 +27,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
     compile project(':yubinggaolibrary')
 }

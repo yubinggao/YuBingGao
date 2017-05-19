@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 android {
     compileSdkVersion rootProject.ext.compileSdk
     buildToolsVersion rootProject.ext.buildTools
@@ -27,9 +30,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':yubinggaolibrary')
+
+}
+repositories {
+    mavenCentral()
 }

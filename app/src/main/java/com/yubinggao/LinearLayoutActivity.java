@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.view.ViewGroup.LayoutParams;
-import com.yubinggao.lib.utils.DynamicLayoutUtil;
+import com.yubinggao.lib.utils.UIDIPPXUtils;
 
 /**
  * Created by Administrator on 2017/5/18.
@@ -23,10 +23,10 @@ public class LinearLayoutActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        addContentView();
-        int vpadding = DynamicLayoutUtil.dipPx(this, 10);
-        int size_48 = DynamicLayoutUtil.dipPx(this, 48);
-        int size_144 = DynamicLayoutUtil.dipPx(this, 144);
-        int size_300 = DynamicLayoutUtil.dipPx(this, 300);
+        int vpadding = UIDIPPXUtils.dipPx(this, 10);
+        int size_48 = UIDIPPXUtils.dipPx(this, 48);
+        int size_144 = UIDIPPXUtils.dipPx(this, 144);
+        int size_300 = UIDIPPXUtils.dipPx(this, 300);
 
         name = createEdtx(LinearLayoutActivity.this, "名字", INPUT_TYPE, "");
         code = createEdtx(LinearLayoutActivity.this, "验证码", INPUT_TYPE, "");
@@ -50,8 +50,8 @@ public class LinearLayoutActivity extends Activity {
 
     public EditText createEdtx(Activity activity, String hint,
                                final int inputType, String leftIcon) {
-        int vpadding = DynamicLayoutUtil.dipPx(activity, 300);
-        int hpadding = DynamicLayoutUtil.dipPx(activity, 48);
+        int vpadding = UIDIPPXUtils.dipPx(activity, 300);
+        int hpadding = UIDIPPXUtils.dipPx(activity, 48);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 0, 1.0F);
 
         EditText edtx = new EditText(activity);
@@ -61,7 +61,7 @@ public class LinearLayoutActivity extends Activity {
         edtx.setHintTextColor(Color.rgb(204, 204, 204));
         edtx.setTextColor(Color.rgb(51, 51, 51));
         edtx.setBackgroundDrawable(null);
-        edtx.setTextSize(TypedValue.COMPLEX_UNIT_SP, DynamicLayoutUtil.dipPx(activity, 16));
+        edtx.setTextSize(TypedValue.COMPLEX_UNIT_SP, UIDIPPXUtils.dipPx(activity, 16));
         edtx.setSelection(edtx.getText().length());
         edtx.setInputType(inputType);
 

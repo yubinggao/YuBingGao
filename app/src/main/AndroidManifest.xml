@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.yubinggao">
 
     <!-- 访问CellID或WiFi, -->
@@ -23,16 +24,17 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <!-- 允许修改系统设置 -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-
+   <!-- android:screenOrientation="portrait"-->
     <application
+            tools:replace="android:allowBackup,Android:icon,android:label,android:theme"
             android:allowBackup="true"
             android:icon="@mipmap/logo"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".RelativeLayoutKotlin"
+                android:name=".HelloKotlin"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                android:screenOrientation="portrait">
+                >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -40,24 +42,30 @@
             </intent-filter>
         </activity>
         <activity
+                android:name="com.yubinggao.MainActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                >
+        </activity>
+        <activity
                 android:name=".viewpager.ViewPagerActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                android:screenOrientation="portrait">
+                >
         </activity>
+
         <activity
                 android:name=".RecyclerViewActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                android:screenOrientation="portrait">
+                >
         </activity>
         <activity
                 android:name=".PhoneInfoActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                android:screenOrientation="portrait">
+                >
         </activity>
         <activity
                 android:name=".lib.map.amap.MapSelectAddressActivity"
                 android:configChanges="keyboardHidden|orientation|screenSize"
-                android:screenOrientation="portrait"
+                
                 android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <!-- start高德地图定位 -->
         <meta-data
@@ -66,10 +74,7 @@
 
         <service android:name="com.amap.api.location.APSService"/>
         <!-- end 高德地图定位服务 -->
-        <activity android:name=".Kotlin">
-        </activity>
-        <activity android:name=".RelativeLayoutKotlin">
-        </activity>
+
     </application>
 
 </manifest>

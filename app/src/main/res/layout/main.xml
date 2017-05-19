@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <com.yubinggao.lib.view.StreamViewGroup
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginRight="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp">
 
         <com.yubinggao.lib.view.CountdownView
-            android:id="@+id/view_pager_cv"
-            style="@style/MainTextView"  />
+                android:id="@+id/view_pager_cv"
+                style="@style/MainTextView"/>
 
         <com.yubinggao.lib.view.CountdownView
-            android:id="@+id/code_cv"
-            style="@style/MainTextView"  />
+                android:id="@+id/code_cv"
+                style="@style/MainTextView"/>
 
         <com.yubinggao.lib.view.CountdownView
-            android:id="@+id/pickerview_cv"
-            style="@style/MainTextView" />
+                android:id="@+id/pickerview_cv"
+                style="@style/MainTextView"/>
 
         <com.yubinggao.lib.view.CountdownView
-            android:id="@+id/amap_map_cv"
-            style="@style/MainTextView"  />
+                android:id="@+id/amap_map_cv"
+                style="@style/MainTextView"/>
 
         <com.yubinggao.lib.view.CountdownView
-            android:id="@+id/recyclerview_cv"
-            style="@style/MainTextView" />
+                android:id="@+id/recyclerview_cv"
+                style="@style/MainTextView"/>
         <com.yubinggao.lib.view.CountdownView
-            android:id="@+id/phone_cv"
-            style="@style/MainTextView" />
+                android:id="@+id/phone_cv"
+                style="@style/MainTextView"/>
 
     </com.yubinggao.lib.view.StreamViewGroup>
 </ScrollView>

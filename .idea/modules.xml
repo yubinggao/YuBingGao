@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/YuBingGao.iml" filepath="$PROJECT_DIR$/YuBingGao.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/explosionanimator/explosionanimator.iml" filepath="$PROJECT_DIR$/explosionanimator/explosionanimator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testjar/testjar.iml" filepath="$PROJECT_DIR$/testjar/testjar.iml" />
       <module fileurl="file://$PROJECT_DIR$/yubinggaolibrary/yubinggaolibrary.iml" filepath="$PROJECT_DIR$/yubinggaolibrary/yubinggaolibrary.iml" />
     </modules>
   </component>

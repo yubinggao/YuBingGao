@@ -24,7 +24,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <!-- 允许修改系统设置 -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-   <!-- android:screenOrientation="portrait"-->
+    <!-- android:screenOrientation="portrait"-->
     <application
             tools:replace="android:allowBackup,Android:icon,android:label,android:theme"
             android:allowBackup="true"
@@ -34,7 +34,7 @@
         <activity
                 android:name=".HelloKotlin"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                >
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -44,28 +44,33 @@
         <activity
                 android:name="com.yubinggao.MainActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                >
+        >
         </activity>
         <activity
                 android:name=".viewpager.ViewPagerActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                >
+        >
         </activity>
 
         <activity
                 android:name=".RecyclerViewActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                >
+        >
+        </activity>
+        <activity
+                android:name=".ExplosionAnimatorActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+        >
         </activity>
         <activity
                 android:name=".PhoneInfoActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
-                >
+        >
         </activity>
         <activity
                 android:name=".lib.map.amap.MapSelectAddressActivity"
                 android:configChanges="keyboardHidden|orientation|screenSize"
-                
+
                 android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <!-- start高德地图定位 -->
         <meta-data

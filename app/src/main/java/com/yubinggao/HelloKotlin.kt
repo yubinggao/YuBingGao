@@ -18,9 +18,9 @@ class HelloKotlin : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin)
         // 窗口横屏
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
-//		// 窗口竖屏
-//		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+		// 窗口竖屏
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
         nameTextView.text = "HelloKotlin,跳转mian"
         nameTextView.textSize = 20f
         nameTextView.setOnClickListener {
@@ -58,27 +58,32 @@ class HelloKotlin : Activity() {
         name.layoutParams = nameLP
         r.addView(name)
 
-        val pwdLP = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 66)
+        val pwdLP = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, d45)
         var pwd = EditText(this)
         pwd.setBackgroundColor(Color.WHITE)
         pwd.setSingleLine()
-        pwd.setId(2)
+        pwd.id = 2
         pwdLP.addRule(RelativeLayout.BELOW, 1)
         pwdLP.topMargin = 10
-        pwd.setLayoutParams(pwdLP)
+        pwd.layoutParams = pwdLP
         r.addView(pwd)
 
         val login = TextView(this)
         login.text = "登\t\t录"
+        login.textSize = 20f
         login.gravity = Gravity.CENTER
         login.setTextColor(Color.WHITE)
         login.setBackgroundResource(R.drawable.selector_countdown_view_bg)
-        val loginLP = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 66)
+        val loginLP = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, d45)
         loginLP.addRule(RelativeLayout.BELOW, 2)
         loginLP.topMargin = 20
         login.id = 3
         login.layoutParams = loginLP
+        login.setOnClickListener(){
+            println("登录")
+        }
         r.addView(login)
+
     }
 
     private fun onClick() {

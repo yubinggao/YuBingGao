@@ -31,8 +31,9 @@
             android:icon="@mipmap/logo"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
+                <!--android:name=".HelloKotlin"-->
         <activity
-                android:name=".HelloKotlin"
+                android:name="com.yubinggao.floatlabeled.MainActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
         >
             <intent-filter>

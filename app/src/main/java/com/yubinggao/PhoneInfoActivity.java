@@ -25,6 +25,7 @@ public class PhoneInfoActivity extends BaseActivity{
         try {
             StringBuilder sb = new StringBuilder();
             TelephonyManager tm = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
+//            System.out.println("手机号码"+tm.getLine1Number() );
         /*
           * 电话状态：
           * 1.tm.CALL_STATE_IDLE=0          无活动

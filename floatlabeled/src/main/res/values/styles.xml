@@ -1,0 +1,8 @@
+<resources>
+
+
+
+    <style name="floatlabelededittext">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+</resources>

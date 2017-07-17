@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:float="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="10dp"
+>
+
+    <com.yubinggao.floatlabeled.FloatLabeledEditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="This is the hint"/>
+    </com.yubinggao.floatlabeled.FloatLabeledEditText>
+
+    <!-- add some padding -->
+    <com.yubinggao.floatlabeled.FloatLabeledEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            float:fletPadding="10dp">
+
+        <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"/>
+    </com.yubinggao.floatlabeled.FloatLabeledEditText>
+
+    <!-- password input -->
+    <com.yubinggao.floatlabeled.FloatLabeledEditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            float:fletPaddingBottom="10dp">
+
+        <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+    </com.yubinggao.floatlabeled.FloatLabeledEditText>
+
+    <!-- change color of hint text-->
+    <com.yubinggao.floatlabeled.FloatLabeledEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            float:fletPaddingBottom="10dp"
+            float:fletTextAppearance="@style/floatlabelededittext">
+
+        <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Styled Hint"
+                android:inputType="textPassword"/>
+    </com.yubinggao.floatlabeled.FloatLabeledEditText>
+    <TextView
+            android:id="@+id/getphone"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="获取内容"
+    />
+</LinearLayout>

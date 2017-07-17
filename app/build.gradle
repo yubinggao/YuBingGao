@@ -37,6 +37,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':yubinggaolibrary')
+    compile project(':floatlabeled')
 
 }
 repositories {

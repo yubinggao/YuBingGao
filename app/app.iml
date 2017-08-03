@@ -137,6 +137,7 @@
     <orderEntry type="library" exported="" name="AMap_Search_V3.5.0_20160927" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-25.0.1" level="project" />
     <orderEntry type="library" exported="" name="design-25.0.1" level="project" />
+    <orderEntry type="library" exported="" name="bga-zbar-1.1.7" level="project" />
     <orderEntry type="library" exported="" name="kotlin-stdlib-1.1.2-4" level="project" />
     <orderEntry type="library" exported="" name="Amap_2DMap_V2.9.2_20161026" level="project" />
     <orderEntry type="library" exported="" name="annotations-13.0" level="project" />
@@ -155,6 +156,7 @@
     <orderEntry type="library" exported="" name="AMap_Location_V3.1.0_20161027" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-25.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.0.1" level="project" />
+    <orderEntry type="library" exported="" name="bga-qrcodecore-1.1.7" level="project" />
     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
   </component>
 </module>

@@ -95,7 +95,7 @@ public class FloatLabeledEditText extends FrameLayout implements View.OnClickLis
             empty.setTextColor(Color.WHITE);
             empty.setTextSize(12);
             empty.setGravity(Gravity.CENTER);
-            empty.setBackground(ShapeUtils.getShape(mContext, 20, 14, 0, Color.RED));
+            empty.setBackground(ShapeUtils.getShape(mContext, 20, 14, 0, Color.GRAY));
             empty.setOnClickListener(this);
             addView(empty, emptyPream);
         }

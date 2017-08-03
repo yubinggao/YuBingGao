@@ -1,1 +1,1 @@
-include ':app', ':yubinggaolibrary', ':explosionanimator', ':testjar', ':floatlabeled', ':diyview'
+include ':app', ':yubinggaolibrary', ':explosionanimator', ':testjar', ':floatlabeled', ':diyview', ':OkGo', ':NoHttp'

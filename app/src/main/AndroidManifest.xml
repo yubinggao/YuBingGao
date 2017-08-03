@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.yubinggao">
-
+    <!--扫一扫-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
     <!-- 访问CellID或WiFi, -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- 用地理位置信息的服务 -->
@@ -31,9 +34,10 @@
             android:icon="@mipmap/logo"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
-                <!--android:name=".HelloKotlin"-->
+                <!--android:name=".HelloKotlin"
+                android:name="com.yubinggao.floatlabeled.MainActivity"-->
         <activity
-                android:name="com.yubinggao.floatlabeled.MainActivity"
+                android:name="com.yubinggao.ScanActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
         >
             <intent-filter>

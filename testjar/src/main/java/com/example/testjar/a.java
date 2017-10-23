@@ -5,8 +5,7 @@ package com.example.testjar;
  */
 public class a {
     public static void main(String[] s) {
-
-        System.out.println(" "+Math.round(1994f/100)*100  );
-        System.out.println(" "+Math.floor(1588/100)*100 );
+        System.out.println(" "+0x522);
+//        ∨Ⅴ ﹀ 
     }
 }

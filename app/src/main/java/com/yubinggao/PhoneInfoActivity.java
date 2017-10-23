@@ -9,7 +9,8 @@ import com.yubinggao.lib.view.CountdownView;
 /**
  * Created by Administrator on 2017/4/12.
  */
-public class PhoneInfoActivity extends BaseActivity{
+public class
+PhoneInfoActivity extends BaseActivity{
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.phone_info_activity);

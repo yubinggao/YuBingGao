@@ -3,6 +3,7 @@ package com.yubinggao.lib.utils;
 
 
 import com.yubinggao.lib.bean.CityInfo;
+import org.json.JSONArray;
 
 import java.util.ArrayList;
 

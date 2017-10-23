@@ -23,7 +23,7 @@ public class ScanActivity extends Activity implements QRCodeView.Delegate {
 
     @Override
     public void onScanQRCodeSuccess(String result) {
-        System.out.println("result: " + result);
+        System.out.println("result: url" + result.split("apk")[0]+"apk");
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
         vibrate();
         mQRCodeView.startSpot();
